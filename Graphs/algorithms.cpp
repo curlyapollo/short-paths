@@ -54,7 +54,7 @@ int64_t ford_bellman(std::vector<std::vector<int64_t>> &graph, int n, int finish
 int64_t floyd_warshall(std::vector<std::vector<int64_t>> &graph, int n, int finish) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            if (graph[i][j] == 0) {
+            if (graph[i][j] == 0 && i != j) {
                 graph[i][j] = kInf;
             }
         }
