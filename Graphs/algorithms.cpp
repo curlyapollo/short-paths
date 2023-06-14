@@ -76,7 +76,7 @@ int64_t dijkstra_on_set(std::vector<std::vector<int64_t>> &graph, int n, int fin
     std::vector<int64_t> d(n, kInf), p(n);
     d[0] = 0;
     std::set<std::pair<int,int>> q;
-    q.insert (std::make_pair(d[0], 0));
+    q.insert(std::make_pair(d[0], 0));
     while (!q.empty()) {
         int v = q.begin()->second;
         q.erase(q.begin());
